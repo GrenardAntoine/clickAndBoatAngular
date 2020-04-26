@@ -1,0 +1,41 @@
+<h3>Catamaran : Information additionnelles</h3>
+
+<form [formGroup]="form">
+  <label>
+    Largeur:
+    <input type="text" formControlName="length">
+  </label>
+  <label>
+    Longueur:
+    <input type="text" formControlName="width">
+  </label>
+  <label>
+    Tirant d'eau:
+    <input type="text" formControlName="draft">
+  </label>
+  <label>
+    Equipage:
+    <input type="radio" formControlName="crew" id="crew-true" value="true">
+    <label for="crew-true">
+      Oui
+    </label>
+    <input type="radio" formControlName="crew" id="crew-false" value="false">
+    <label for="crew-false">
+      Non
+    </label>
+  </label>
+  <label>
+    Annexe:
+    <input type="radio" formControlName="annex" id="annex-true" value="true">
+    <label for="annex-true">
+      Oui
+    </label>
+    <input type="radio" formControlName="annex" id="annex-false" value="false">
+    <label for="annex-false">
+      Non
+    </label>
+  </label>
+</form>
+
+<button (click)="next()">Suivant</button>
+

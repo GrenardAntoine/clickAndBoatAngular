@@ -1,0 +1,31 @@
+<a routerLink="owner-type">Ajouter un bateau</a>
+
+<form [formGroup]="form">
+  <select formControlName="ownerType">
+    <option value="">Type de loueur</option>
+    <option value="individual">particulier</option>
+    <option value="professional">Professionel</option>
+  </select>
+  <select formControlName="boatType">
+    <option value="">Type de bateau</option>
+    <option value="sailingShip">Voilier</option>
+    <option value="catamaran">Catamaran</option>
+    <option value="motorBoat">Bateau à moteur</option>
+    <option value="halfRigid">Semi-Rigide</option>
+    <option value="barge">Péniche</option>
+    <option value="jetSki">Jet-Ski</option>
+    <option value="yatch">Yatch</option>
+  </select>
+</form>
+
+<div *ngFor="let boat of filteredBoats">
+  <b>Type de loueur: </b>{{boat.ownerType}}<br/>
+  <b>Type de bateau: </b>{{boat.boatType}}<br/>
+  <div *ngIf="boat.boatType === 'catamaran'">
+    <b>Longueur: </b>{{boat.additionalInfo.length}}<br/>
+    <b>Largeur: </b>{{boat.additionalInfo.width}}<br/>
+    <b>Tirant d’eau: </b>{{boat.additionalInfo.draft}}<br/>
+    <b>Equipage: </b>{{boat.additionalInfo.crew}}<br/>
+    <b>Annexe: </b>{{boat.additionalInfo.annex}}<br/>
+  </div>
+</div>

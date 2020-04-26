@@ -1,0 +1,11 @@
+<h3>Récapitulatif</h3>
+<b>Type de loueur: </b>{{boat.ownerType}}<br/>
+<b>Type de bateau: </b>{{boat.boatType}}<br/>
+<div *ngIf="boat.boatType === 'catamaran'">
+  <b>Longueur: </b>{{boat.additionalInfo.length}}<br/>
+  <b>Largeur: </b>{{boat.additionalInfo.width}}<br/>
+  <b>Tirant d’eau: </b>{{boat.additionalInfo.draft}}<br/>
+  <b>Equipage: </b>{{boat.additionalInfo.crew}}<br/>
+  <b>Annexe: </b>{{boat.additionalInfo.annex}}<br/>
+</div>
+<button (click)="save()">Envoyer</button>

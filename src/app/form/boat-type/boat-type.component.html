@@ -1,0 +1,55 @@
+<h4>Etape 1/8</h4>
+<h3>Votre bateau</h3>
+
+<form [formGroup]="form">
+  <div>
+    <input type="radio" formControlName="boatType" id="sailingShip" value="sailingShip">
+    <label for="sailingShip">
+      Voilier
+    </label>
+  </div>
+
+  <div>
+    <input type="radio" formControlName="boatType" id="catamaran" value="catamaran"/>
+    <label for="catamaran">
+      Catamaran
+    </label>
+  </div>
+
+  <div>
+    <input type="radio" formControlName="boatType" id="motorBoat" value="motorBoat"/>
+    <label for="motorBoat">
+      Bateau à moteur
+    </label>
+  </div>
+
+  <div>
+    <input type="radio" formControlName="boatType" id="halfRigid" value="halfRigid"/>
+    <label for="halfRigid">
+      Semi-Rigide
+    </label>
+  </div>
+
+  <div>
+    <input type="radio" formControlName="boatType" id="barge" value="barge"/>
+    <label for="barge">
+      Péniche
+    </label>
+  </div>
+
+  <div>
+    <input type="radio" formControlName="boatType" id="jet-ski" value="jetSki"/>
+    <label for="jet-ski">
+      Jet-Ski
+    </label>
+  </div>
+
+  <div>
+    <input type="radio" formControlName="boatType" id="yatch" value="yatch"/>
+    <label for="yatch">
+      Yatch
+    </label>
+  </div>
+
+  <button (click)="next()">Suivant</button>
+</form>

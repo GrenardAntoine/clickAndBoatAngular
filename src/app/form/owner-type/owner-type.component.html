@@ -1,0 +1,22 @@
+<h1>Louer un bateau <br/>
+  sur Click & Boat</h1>
+
+<h3>Je suis :</h3>
+
+<form [formGroup]="form">
+  <div>
+    <input type="radio" formControlName="ownerType" id="individual" value="individual">
+    <label for="individual">
+      Un particulier
+    </label>
+  </div>
+
+  <div>
+    <input type="radio" formControlName="ownerType" id="professional" value="professional"/>
+    <label for="professional">
+      Un professionel
+    </label>
+  </div>
+
+  <button (click)="start()">Commencer</button>
+</form>
