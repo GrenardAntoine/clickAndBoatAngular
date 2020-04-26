@@ -29,7 +29,7 @@ export class BoatTypeComponent implements OnInit {
 
     if (this.boat.boatType === 'catamaran') {
       this.router.navigate(['/catamaran-settings'], {state: {boat: this.boat}});
-    } else if (this.boat.boatType === 'sailingShip') {
+    } else if (this.boat.boatType === 'voilier') {
       this.router.navigate(['/sailing-ship-settings'], {state: {boat: this.boat}});
     } else {
       this.router.navigate(['/submit'], {state: {boat: this.boat}});

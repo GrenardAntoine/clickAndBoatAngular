@@ -3,22 +3,22 @@
 <form [formGroup]="form">
   <select formControlName="ownerType">
     <option value="">Type de loueur</option>
-    <option value="individual">particulier</option>
-    <option value="professional">Professionel</option>
+    <option value="particulier">particulier</option>
+    <option value="professionnel">professionnel</option>
   </select>
   <select formControlName="boatType">
     <option value="">Type de bateau</option>
-    <option value="sailingShip">Voilier</option>
+    <option value="voilier">Voilier</option>
     <option value="catamaran">Catamaran</option>
     <option value="motorBoat">Bateau à moteur</option>
-    <option value="halfRigid">Semi-Rigide</option>
-    <option value="barge">Péniche</option>
+    <option value="semiRigide">Semi-Rigide</option>
+    <option value="peniche">Péniche</option>
     <option value="jetSki">Jet-Ski</option>
     <option value="yatch">Yatch</option>
   </select>
 </form>
 
-<div *ngFor="let boat of filteredBoats">
+<div class="boat" *ngFor="let boat of filteredBoats">
   <b>Type de loueur: </b>{{boat.ownerType}}<br/>
   <b>Type de bateau: </b>{{boat.boatType}}<br/>
   <div *ngIf="boat.boatType === 'catamaran'">

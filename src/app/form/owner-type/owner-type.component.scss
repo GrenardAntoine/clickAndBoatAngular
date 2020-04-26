@@ -1,0 +1,110 @@
+.row {
+  display: flex;
+}
+
+.col-2 {
+  width: 25%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-10 {
+  width: 75%;
+  padding: 25px;
+}
+
+#left-part {
+  box-sizing: border-box;
+  padding: 100px;
+  width: 50%;
+  min-height: 100vh;
+  background-color: #fbfbfb;
+
+  h1 {
+    margin-bottom: 100px;
+  }
+
+  .radio-button {
+    width: 200px;
+    height: 75px;
+    background: white;
+
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    border: 0;
+    border-radius: 3px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    width: 200px;
+    height: 75px;
+    background: #1abc9c;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    border: 0;
+    border-radius: 3px;
+  }
+}
+
+#right-part {
+  background-image: url("../../../assets/images/beach.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #encart {
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+      color: #444444;
+    }
+
+    padding: 50px;
+    width: 50%;
+    background-color: #fbfbfb;
+
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 720px) {
+  #left-part {
+    padding: 25px;
+    width: 100%;
+    text-align: center;
+
+    .radio-button {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    button {
+      display: inline-block;
+    }
+  }
+
+  #right-part {
+    display: none;
+  }
+}

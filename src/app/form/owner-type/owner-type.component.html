@@ -1,22 +1,66 @@
-<h1>Louer un bateau <br/>
-  sur Click & Boat</h1>
+<div class="row">
+  <div id="left-part">
+    <h1>Louer son bateau <br/>
+      sur Click & Boat</h1>
 
-<h3>Je suis :</h3>
+    <h3>Je suis :</h3>
 
-<form [formGroup]="form">
-  <div>
-    <input type="radio" formControlName="ownerType" id="individual" value="individual">
-    <label for="individual">
-      Un particulier
-    </label>
+    <form [formGroup]="form">
+      <div class="radio-button">
+        <input type="radio" formControlName="ownerType" id="particulier" value="particulier">
+        <label for="particulier">
+          Un particulier
+        </label>
+      </div>
+
+      <div class="radio-button">
+        <input type="radio" formControlName="ownerType" id="professionnel" value="professionnel"/>
+        <label for="professionnel">
+          Un professionnel
+        </label>
+      </div>
+
+      <button (click)="start()">Commencer</button>
+    </form>
   </div>
-
-  <div>
-    <input type="radio" formControlName="ownerType" id="professional" value="professional"/>
-    <label for="professional">
-      Un professionel
-    </label>
+  <div id="right-part">
+    <div id="encart">
+      <div class="row">
+        <div class="col-2">
+          <img src="assets/images/cochon.png">
+        </div>
+        <div class="col-10">
+          <h3>Gratuit</h3>
+          <p>C'est gratuit, et cela vous permet d'amortir vos frais d'entretients</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <img src="assets/images/shield.png">
+        </div>
+        <div class="col-10">
+          <h3>Assuré</h3>
+          <p>Louez l'esprit sereinement a nos utilisateurs grace a notre assurance Global Assistance</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <img src="assets/images/person.png">
+        </div>
+        <div class="col-10">
+          <h3>Libre</h3>
+          <p>Choisissez librement vos locataires, et aucune obligation de louer</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <img src="assets/images/phone.png">
+        </div>
+        <div class="col-10">
+          <h3>Accompagné</h3>
+          <p>Une équipe intenationale toute l'année pour vous aider en cas de besoin</p>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <button (click)="start()">Commencer</button>
-</form>
+</div>

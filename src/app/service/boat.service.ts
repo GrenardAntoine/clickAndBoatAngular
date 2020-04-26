@@ -8,13 +8,13 @@ import { CatamaranInfo } from '../entities/catamaran-info.component';
 export class BoatService {
 
   public boats: Boat[] = [
-    new Boat('individual', 'sailingShip'),
-    new Boat('professional', 'catamaran', new CatamaranInfo(12, 3, 14.5, false, true)),
-    new Boat('individual', 'motorBoat'),
-    new Boat('professional', 'halfRigid'),
-    new Boat('individual', 'barge'),
-    new Boat('individual', 'jetSki'),
-    new Boat('individual', 'yatch')
+    new Boat('particulier', 'voilier'),
+    new Boat('professionnel', 'catamaran', new CatamaranInfo(12, 3, 14.5, false, true)),
+    new Boat('particulier', 'motorBoat'),
+    new Boat('professionnel', 'semiRigide'),
+    new Boat('particulier', 'peniche'),
+    new Boat('particulier', 'jetSki'),
+    new Boat('particulier', 'yatch')
   ];
 
   constructor() { }
